@@ -10,7 +10,6 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TablePagination from "@material-ui/core/TablePagination";
 import UserDetails from "./UserDetails";
-import Filter from "./Filter";
 
 export const StyledTableCell = withStyles((theme) => ({
   head: {
