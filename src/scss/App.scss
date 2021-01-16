@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.main-holder {
+  transition: all 0.4s ease-in-out;
+  height: 100vh;
+  overflow-y: scroll;
+
+  .views-holder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .font-bold {
+    font-weight: 600;
+  }
+
+  .user-holder {
+    min-width: 70%;
+    padding: 1rem;
+    margin: 0 0.5rem;
+    .loader {
+      margin-top: 1rem;
+      width: 90vw;
+      @include md-min {
+        width: 50vw;
+      }
+    }
+  }
+
+  .search {
+    width: 300px;
+    min-width: 20%;
+    padding: 1rem;
+    border-radius: 10px;
+    height: fit-content;
+
+    .results {
+      margin-top: 1rem;
+      padding: 0.5rem;
+    }
+
+    .result-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

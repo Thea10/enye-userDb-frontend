@@ -1,0 +1,12 @@
+$loaderBg: #f5f5f5;
+$loaderMask: #e6e6e6;
+$loaderMask2: #dddddd;
+$searchShadow: #d4dbe3;
+$screen-md-min: 768px;
+
+@mixin md-min {
+    @media(min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
