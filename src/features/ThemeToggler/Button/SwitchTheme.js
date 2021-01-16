@@ -18,7 +18,7 @@ const SwitchTheme = ({ color, switchTheme, checked, toggleCheck }) => {
 
   return (
     <div className={switchClass.root}>
-      <Tooltip title={checked ? "Dark Mode" : "Light Mode"}>
+      <Tooltip title={checked ? "Light Mode" : "Dark Mode"}>
         <IconButton
           aria-label="Switch theme"
           style={{ color: color }}
@@ -27,7 +27,7 @@ const SwitchTheme = ({ color, switchTheme, checked, toggleCheck }) => {
             toggleCheck();
           }}
         >
-          {checked ? < Brightness3Outlined  /> : <WbSunnyRounded />}
+          {checked ? <WbSunnyRounded   /> : <Brightness3Outlined />}
         </IconButton>
       </Tooltip>
     </div>

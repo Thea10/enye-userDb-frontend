@@ -2,30 +2,30 @@ import React, { useState, useEffect } from "react";
 import { Themes } from "./Theme";
 
 const initialState = {
-  dark: false,
-  theme: Themes.light,
+  light: false,
+  theme: Themes.dark,
   toggle: () => {},
 };
 
 const ThemeContext = React.createContext(initialState);
 
 function ThemeProvider({ children }) {
-  const [dark, setTheme] = useState(false);
+  const [light, setTheme] = useState(false);
 
   useEffect(() => {
-    const isDark = localStorage.getItem("dark") === "true";
-    setTheme(isDark);
-  }, [dark]);
+    const isLight = localStorage.getItem("light") === "true";
+    setTheme(isLight);
+  }, [light]);
 
   const toggle = () => {
-    const isDark = !dark;
-    localStorage.setItem("dark", JSON.stringify(isDark));
-    setTheme(isDark);
+    const isLight = !light;
+    localStorage.setItem("light", JSON.stringify(isLight));
+    setTheme(isLight);
   };
-  const bodyTheme = dark ? Themes.dark : Themes.light;
+  const bodyTheme = light ? Themes.light : Themes.dark;
 
   return (
-    <ThemeContext.Provider value={{ bodyTheme, dark, toggle }}>
+    <ThemeContext.Provider value={{ bodyTheme, light, toggle }}>
       {children}
     </ThemeContext.Provider>
   );
