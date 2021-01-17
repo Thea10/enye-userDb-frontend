@@ -40,7 +40,7 @@ const SearchBar = () => {
 
   const setDefault = () => {
     setfeedbackText("Enter a search term to search for a patient");
-    dispatch(setDefaultStatus({ status: "none", list: [] }));
+    dispatch(setDefaultStatus({ status: "none", list: [], text: null }));
     setTimeout(() => {
       setfeedbackText(null);
     }, 4000);
@@ -55,7 +55,7 @@ const SearchBar = () => {
   };
 
   const handleBtnClick = () => {
-    if (searchText === "") {
+    if (searchText === null) {
       setDefault();
       return;
     }

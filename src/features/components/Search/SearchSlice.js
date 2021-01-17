@@ -16,8 +16,10 @@ export const SearchSlice = createSlice({
       state.searchText = payload;
     },
     setDefaultStatus: (state, {payload}) => {
-      state.status = payload.status;
-      state.searchResult = payload.list
+      let {status, list, text} = payload;
+      state.status = status;
+      state.searchResult = list;
+      state.searchText = text;
     },
     searchUsers: (state, {payload}) =>{
         state.searchResult = _.filter(
