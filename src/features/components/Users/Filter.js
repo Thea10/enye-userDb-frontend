@@ -26,7 +26,11 @@ const filterActionStyles = makeStyles((theme) => ({
   },
   formControl: {
     display: "block",
-    marginLeft: "0.5rem",
+    margin: "0.2rem 0.5rem",
+
+    " & .MuiInputBase-root": {
+      borderRadius: "10px"
+    }
   },
 }));
 
@@ -76,7 +80,7 @@ const Filter = () => {
           onChange={changeFilter}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
-          style={{ color: bodyTheme.tableText }}
+          style={{ color: bodyTheme.togglerColor, background: bodyTheme.iconBg }}
         >
           <MenuItem value="" disabled>
             Filter By
@@ -94,7 +98,8 @@ const Filter = () => {
             onChange={filterGender}
             displayEmpty
             inputProps={{ "aria-label": "Without label" }}
-            style={{ color: bodyTheme.tableText }}
+            style={{ color: bodyTheme.togglerColor, background: bodyTheme.iconBg }}
+
           >
             <MenuItem value="" disabled>
               Select Gender
@@ -111,7 +116,8 @@ const Filter = () => {
             onChange={filterPayment}
             displayEmpty
             inputProps={{ "aria-label": "Without label" }}
-            style={{ color: bodyTheme.tableText }}
+            style={{ color: bodyTheme.togglerColor, background: bodyTheme.iconBg }}
+
           >
             <MenuItem value="" disabled>
               Select Payment Method

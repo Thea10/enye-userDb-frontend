@@ -2,7 +2,8 @@ const Themes = {
   dark: {
     background: "#292929",
   //  background: "#4a4d50",
-    tableBg: "#1e1e1e",
+   // tableBg: "#1e1e1e",
+   tableBg: "#130e0e",
     headText: "#f16a4d",
     headText2: "#ff6139",
     tableText:"#b4b9c0",
