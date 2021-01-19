@@ -23,6 +23,9 @@ const filterActionStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     alignItems: "center",
+    borderRadius: "10px",
+    margin: "1rem",
+    padding: "0.5rem"
   },
   formControl: {
     display: "block",
@@ -58,7 +61,7 @@ const Filter = () => {
     dispatch(clearFilters());
   };
   return (
-    <div className={actionStyles.root}>
+    <div className={actionStyles.root} style={{background: bodyTheme.tableBg}}>
       {filtered ? (
         <Tooltip title="Clear Filters">
           <IconButton
